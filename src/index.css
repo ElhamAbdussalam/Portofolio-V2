@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+* {
+  font-family: poppins;
+}
+
+body {
+  @apply bg-black text-white;
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem; /* 32px */
+
+  /* Breakpoints */
+  @media (min-width: 40rem) {
+    /* 640px */
+    max-width: 40rem;
+  }
+  @media (min-width: 48rem) {
+    /* 768px */
+    max-width: 48rem;
+  }
+  @media (min-width: 64rem) {
+    /* 1024px */
+    max-width: 64rem;
+  }
+  @media (min-width: 80rem) {
+    /* 1280px */
+    max-width: 80rem;
+  }
+  @media (min-width: 96rem) {
+    /* 1536px */
+    max-width: 96rem;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
+}
+
+.jello-horizontal {
+  animation: jello-horizontal 0.9s linear both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.nav-sparkle {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-sparkle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, #fab007, transparent);
+  transition: left 0.6s ease-in-out;
+}
+
+.nav-sparkle:hover::after {
+  animation: sparkle 1.2s ease-in-out;
+}
+
+@keyframes sparkle {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+/* Ubah warna bullet Swiper */
+.swiper-pagination-bullet {
+  background-color: #ccc !important; /* Bullet biasa jadi abu */
+  opacity: 0.7 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fab007 !important; /* Bullet aktif jadi kuning */
+  opacity: 1 !important;
+}
+
+/* Warna panah navigasi */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fab007 !important;
+}
