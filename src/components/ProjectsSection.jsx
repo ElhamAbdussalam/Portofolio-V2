@@ -8,9 +8,21 @@ import SPK from "/src/assets/2.png";
 import DesaKu from "/src/assets/3.png";
 import BackEnd from "/src/assets/4.png";
 import FrontEnd from "/src/assets/5.png";
+import School from "/src/assets/school.png";
+import Cashier from "/src/assets/cashier.png";
 
 export const ProjectsSection = () => {
   const projects = [
+    {
+      title: "School Management App",
+      stack: "Next JS, Typescript, Taillwind CSS, Prisma Studio",
+      image: School,
+    },
+    {
+      title: "Cashier App",
+      stack: "Laravel 12, Bootstrap, MySQL",
+      image: Cashier,
+    },
     {
       title: "Portofolio V1",
       stack:
